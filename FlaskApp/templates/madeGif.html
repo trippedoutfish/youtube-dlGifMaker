@@ -8,7 +8,8 @@
     <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
  
     <link href="http://getbootstrap.com/examples/jumbotron-narrow/jumbotron-narrow.css" rel="stylesheet">
- 
+	<script src="../static/js/jquery-1.11.3.js"></script>
+	<script src="../static/js/dlGif.js"></script>
  
 </head>
  
@@ -17,10 +18,18 @@
 	
 		<div class="container">
             <h1>Youtube-dl Gif Maker</h1>
-            <p class="lead"></p>
-			<input type="text" class="form-control" id="url">
-            <p><a class="btn btn-lg btn-success" href="madeGif" role="button">Make a gif!</a>
-            </p>
+			<form class="form-get-url">
+			<input type="text" name="url" class="form-control" id="url">
+            <button id="btndlGif" class="btn btn-lg btn-success" type="button">Make a gif!</button>
+			<input id="btnGetGif" class="btn btn-lg btn-success" href="/" type="button">Download your gif!			</form>
+			<script type="text/javascript">
+				var link= document.getElementById('btnGetGif');
+				var input= document.getElementById('url');
+				input.onchange=input.onkeyup= function() {
+					link.href = input.value;
+					//link.firstChild.data= link.href;
+				};
+			</script>
         </div>
 
     </div>
