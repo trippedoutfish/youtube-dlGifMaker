@@ -9,7 +9,7 @@ app.debug = True
 class MyLogger(object):
 	#Print msg if you want to see debug messages
 	def debug(self, msg):
-		pass
+		print(msg)
  
 	#Prints warnings
 	def warning(self, msg):
@@ -60,7 +60,7 @@ def dlGif():
 	with youtube_dl.YoutubeDL(ydl_opts) as ydl:
 		ydl.download([_url])
 	#Make the gif
-	clip = (VideoFileClip(filename+".mp4").subclip(float(start),float(end)))
+	clip = (VideoFileClip(filename+".mp4").subclip(float(_start),float(_end)))
 	clip.write_gif(filename+".gif")
 	#Finished
 	print("Done.")
