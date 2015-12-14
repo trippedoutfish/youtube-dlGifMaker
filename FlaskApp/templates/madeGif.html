@@ -20,16 +20,10 @@
             <h1>Youtube-dl Gif Maker</h1>
 			<form class="form-get-url">
 			<input type="text" name="url" class="form-control" id="url">
-            <button id="btndlGif" class="btn btn-lg btn-success" type="button">Make a gif!</button>
-			<input id="btnGetGif" class="btn btn-lg btn-success" href="/" type="button">Download your gif!			</form>
-			<script type="text/javascript">
-				var link= document.getElementById('btnGetGif');
-				var input= document.getElementById('url');
-				input.onchange=input.onkeyup= function() {
-					link.href = input.value;
-					//link.firstChild.data= link.href;
-				};
-			</script>
+			<input type="text" name="start" class="form-control" id="start">
+			<input type="text" name="end" class="form-control" id="end">
+            <button id="btndlGif" class="btn btn-lg btn-success" type="button">Make that gif!</button>
+			</form>
         </div>
 
     </div>
